@@ -1,1 +1,1 @@
-export * from "@/parenteral/index";
+export * from "@/parenteral";
