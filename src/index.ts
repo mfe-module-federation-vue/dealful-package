@@ -1,1 +1,1 @@
-export * from "@/parenteral";
+export * from "./parenteral";
