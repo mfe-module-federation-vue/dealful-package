@@ -3,10 +3,12 @@ module.exports = {
   testEnvironment: "node",
   testMatch: ["**/?(*.)+(spec).+(ts|tsx|js)"],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.(ts|tsx|js)$": "ts-jest",
+    // "^.+\\.js$": "babel-jest",
   },
-  moduleDirectories: ["node_modules", "src"],
+  // moduleDirectories: ["node_modules", "src"],
   moduleNameMapper: {
     "@/(.*)": "<rootDir>/src/$1",
   },
+  transformIgnorePatterns: ["/node_modules/(?!nanoevents)"],
 };

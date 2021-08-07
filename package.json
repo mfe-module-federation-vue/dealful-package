@@ -1,18 +1,9 @@
 {
-  "name": "nutris-roles",
+  "name": "dealful",
   "version": "1.0.0",
-  "description": "Roles to calculate parenteral nutrition",
-  "author": "Tássio Jordão, João Matheus e Pedro Henrique",
-  "keywords": [
-    "parenteral",
-    "nutris",
-    "nutrition"
-  ],
+  "description": "-",
+  "author": "-",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/open-ish/nutris-roles.git"
-  },
   "scripts": {
     "test": "jest --no-cache",
     "build": "tsc",
@@ -21,7 +12,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
-    "@types/jest": "^26.0.14",
+    "@types/jest": "^26.0.24",
     "@types/node": "^13.11.0",
     "eslint-plugin-jest": "^23.18.0",
     "jest": "^25.5.4",
@@ -30,11 +21,10 @@
     "tslint": "^6.1.1",
     "typescript": "^3.9.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "nanoevents": "^6.0.0"
+  },
   "engines": {
     "node": ">=8"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@open-ish"
   }
 }

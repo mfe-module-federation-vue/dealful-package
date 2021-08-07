@@ -16,7 +16,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "allowJs": true
   },
   "compileOnSave": true,
   "include": ["src"]
