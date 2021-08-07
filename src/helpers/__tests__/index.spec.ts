@@ -9,8 +9,8 @@ const fakeUser = {
   picture: { large: "asdasd", small: "fasfda" },
 };
 
-describe("CHANGE", () => {
-  it("CHANGE", () => {
+describe("Validate emitters ", () => {
+  it("Should emit user date and get it at on method", () => {
     let initialUser = {} as User;
 
     // set state User on has emitted
