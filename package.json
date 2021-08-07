@@ -1,8 +1,8 @@
 {
   "name": "dealful",
-  "version": "1.0.0",
-  "description": "-",
-  "author": "-",
+  "version": "0.0.1",
+  "description": "Dealful is a package to create deals for our mfes, which was created in that way (as a package) to be versionable.",
+  "author": "Tássio Jordão and Alan Schio",
   "license": "ISC",
   "scripts": {
     "test": "jest --no-cache",
@@ -26,5 +26,12 @@
   },
   "engines": {
     "node": ">=8"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@mfe-module-federation-vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfe-module-federation-vue/dealful-package.git"
   }
 }
