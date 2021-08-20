@@ -1,6 +1,8 @@
+import { STORAGE_KEYS } from "@/keys";
 import { EVENT_KEYS } from "@/keys/events";
 import { User } from "@/model/User";
 import { emitter } from "../nanoevents";
+import { userData } from "../storage";
 
 const fakeUser = {
   name: { first: "userName", last: "last" },
@@ -24,5 +26,46 @@ describe("Validate emitters ", () => {
       expect(initialUser).toEqual({});
       return fakeUser;
     });
+  });
+});
+
+let user: unknown;
+const localStorageMock = (() => {
+  return {
+    getItem(key: STORAGE_KEYS) {
+      return JSON.stringify(user);
+    },
+  };
+})();
+
+Object.defineProperty(window, "localStorage", {
+  value: localStorageMock,
+});
+describe("Validate storage ", () => {
+  it("Should return erro when is undefined", () => {
+    let data = null;
+    let erro = null;
+
+    try {
+      data = userData();
+    } catch (error) {
+      erro = error;
+    }
+    expect(erro).toBeInstanceOf(Error);
+    expect(data).toBeNull();
+  });
+  it("Should return user data when has value", () => {
+    let data = null;
+    let erro = null;
+
+    user = { name: "teste" };
+
+    try {
+      data = userData();
+    } catch (error) {
+      erro = error;
+    }
+    expect(erro).toBeNull();
+    expect(data).toEqual(user);
   });
 });

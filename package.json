@@ -1,6 +1,6 @@
 {
   "name": "@mfe-module-federation-vue/dealful-package",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dealful is a package to create deals for our mfes, which was created in that way (as a package) to be versionable.",
   "author": "Tássio Jordão and Alan Schio",
   "license": "ISC",
