@@ -1,4 +1,4 @@
 export enum STORAGE_KEYS {
-  USER_DAT = "ud",
+  USER_DATA = "ud",
   TOKEN = "ut",
 }
