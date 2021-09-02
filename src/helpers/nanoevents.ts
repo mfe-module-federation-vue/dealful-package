@@ -9,10 +9,10 @@ interface UserEvents {
 }
 
 interface CartEvents {
-  [EVENT_KEYS.ADD_TO_CART]: (emitCallback: () => Cart) => void;
-
+  [EVENT_KEYS.CART]: (emitCallback: () => Cart) => void;
 }
 
 const emitter = createNanoEvents<UserEvents>();
+const cartEmitter = createNanoEvents<CartEvents>();
 
-export { emitter };
+export { emitter, cartEmitter };
